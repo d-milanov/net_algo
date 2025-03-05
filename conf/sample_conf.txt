@@ -1,0 +1,73 @@
+# Sample configuration file for the timing test of the Net algorithm against the complete search.
+# Processing configured in this file takes 5-15 minutes depending on your computer.
+# You can track progress in the BF_dbg and Net_dbg files.
+
+# Required. Program output: file name or System.out
+out = System.out
+
+# Optional. Program debug output: file name or System.out
+dbgOut = System.out
+
+# Optional. Data loader class name for matrix construction correctness check.
+check.dataLoader = celestial.orbits.net_algo.util.DataLoader$Neodys
+
+# Optional. Data file for matrix construction correctness check.
+check.dataFile = data/neodys.cat
+
+# Optional. Data loader class name for the main test.
+test.dataLoader = celestial.orbits.net_algo.util.DataLoader$Cams
+
+# Optional. Data file name for the main test.
+test.dataFile = data/CAMS-v2-2013.csv
+
+# Required. Threshold distance value. All distances not more than eps are included into resulting matrix.
+eps = 0.2
+
+# Required. Number of tests
+nTests = 1
+
+# Required. Distance matrix implementation class name. Distances found by the algorithm go here.
+algo.matrix = celestial.orbits.net_algo.DistMatrix$Stub
+
+# Required. Distance matrix implementation class name. Dsiatances found by the benchmark algorithm go here.
+benchmark.matrix = celestial.orbits.net_algo.DistMatrix$Stub
+
+# Required. Algorithm name: Net or BruteForce.
+algo = Net
+
+# Required. Each pivotStep-th data point will be used in the pivots search.
+algo.pivotStep = 20
+
+# Required. The algorithm splits the input data set into neighbourhoods centered at pivots with radii equal to eps + delta.
+algo.delta = 0.7
+
+# Required. Distance name: D1, D2, DD, Rho, DH or Eucl. See Distance.java
+algo.dist = Rho
+
+# Optional. Algo debug output: file name or System.out
+algo.dbgOut = Net_dbg
+
+# Optional. Trace progress at each 'progress'-th percent.
+algo.progress = 1
+
+# Required. Maximum pivots number.
+algo.maxNodes = 1000
+
+# Required. Algo distance matrix output: file name or System.out
+algo.matrixOut = Net_matr_Rho_02
+
+
+# Required. Benchmark algorithm name: Net or BruteForce.
+benchmark = BruteForce
+
+# Required. Distance name: D1, D2, DD, Rho, DH or Eucl. See Distance.java
+benchmark.dist = Rho
+
+# Optional. Benchmark algo debug output: file name or System.out
+benchmark.dbgOut = BF_dbg
+
+# Optional. Trace progress at each 'progress'-th percent.
+benchmark.progress = 1
+
+# Required. Benchmark algo distance matrix output: file name or System.out
+benchmark.matrixOut = BF_matr_Rho_02

@@ -1,0 +1,31 @@
+
+out = System.out
+dbgOut = System.out
+
+check.dataLoader = celestial.orbits.net_algo.util.DataLoader$Neodys
+check.dataFile = data/neodys.cat
+
+
+test.dataLoader = celestial.orbits.net_algo.util.DataLoader$Cams
+test.dataFile = data/CAMS-v2-2013.csv
+
+
+eps = 0.2
+nTests = 5
+algo.matrix = celestial.orbits.net_algo.DistMatrix$Stub
+benchmark.matrix = celestial.orbits.net_algo.DistMatrix$Stub
+
+algo = Net
+algo.pivotStep = 20
+algo.delta = 0.7
+algo.dist = Rho
+algo.dbgOut = Net_dbg
+algo.progress = 1
+algo.maxNodes = 1000
+algo.matrixOut = Net_matr_Rho_02
+
+benchmark = BruteForce
+benchmark.dist = Rho
+benchmark.dbgOut = BF_dbg
+benchmark.progress = 1
+benchmark.matrixOut = BF_matr_Rho_02

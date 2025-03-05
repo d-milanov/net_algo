@@ -1,0 +1,35 @@
+Testing algo
+{class=Net, dbgOut=Net_dbg, delta=0.7, dist=Rho, matrix=celestial.orbits.net_algo.DistMatrix$Stub, matrixOut=Net_matr_Rho_02, maxNodes=1000, pivotStep=20, progress=1}
+against benchmark algo
+{class=BruteForce, dbgOut=BF_dbg, dist=Rho, matrix=celestial.orbits.net_algo.DistMatrix$Stub, matrixOut=BF_matr_Rho_02, progress=1}
+==========================================================
+Correctness check
+Loaded 17642 orbits (100.000% of all valid rows)
+#M1 = 780068  #M2 = 780068  #(M1 \ M2) = 0  #(M2 \ M1) = 0  max|d1 - d2| = 0.000000
+==========================================================
+Test
+Cannot parse data: CAMS v2.0 #,Daily #,Date,Time (UT),Tbeg (s),Tend (s),RA inf,�,DEC inf,�,V inf,�,Acc1,�,Acc2,�,Lat beg,�,Long beg,�,H beg,�,Lat end,�,Long end,�,H end,�,Q (deg),Az rad (from S),Z rad,H max,Max Mv (mag),Integr Mv,F-skew,Stations,IAU#,Verified,#,Date,UT (begin),RA_g,�,DEC_g,�,Vg,�,lambda_g,�,beta_g,�,Vh,�,lamb da_h,�,beta_h,�,Sol long,�,q,�,1/a,�,a,e,�,i,�,w,�,Node,�,Pi,�,Stations,Flag Vg=0,T_J,Flag pairs, 
+Loaded 109548 orbits (100.000% of all valid rows)
+Algo stat:
+
+Average: 0 m 28 s 395 ms
+	Best: 0 m 28 s 395 ms
+	Worst: 0 m 28 s 395 ms
+
+
+Algo message:
+1063210008 (0.177192) distance calculations
+
+=============================
+Benchmark stat:
+
+Average: 1 m 7 s 643 ms
+	Best: 1 m 7 s 643 ms
+	Worst: 1 m 7 s 643 ms
+
+
+Algo message:
+6000327378 (1.000000) distance calculations
+
+=============================
+Avg Benchmark / Avg Algo: 2.3822151787286496

@@ -1,0 +1,33 @@
+
+out = System.out
+dbgOut = System.out
+
+#check.dataLoader = celestial.orbits.net_algo.util.DataLoader$Neodys
+check.dataFile = data/neodys.cat
+
+
+test.dataLoader = celestial.orbits.net_algo.util.DataLoader$Mpcorb
+test.dataFile = data/MPCORB.DAT
+test.dataFilter = MainBelt
+test.dataFilter.times = 7
+
+
+eps = 10
+nTests = 1
+algo.matrix = celestial.orbits.net_algo.DistMatrix$Distrib
+benchmark.matrix = celestial.orbits.net_algo.DistMatrix$Distrib
+
+algo = Net
+algo.pivotStep = 50
+algo.delta = 0.2
+algo.dist = D2
+algo.dbgOut = Net_dbg
+algo.progress = 1
+algo.maxNodes = 1000
+algo.matrixOut = Net_matr_D2_10_Distrib_mBelt_r7
+
+benchmark = BruteForce
+benchmark.dist = D2
+benchmark.dbgOut = BF_dbg
+benchmark.progress = 1
+benchmark.matrixOut = BF_matr_D2_10_Distrib_mBelt_r7

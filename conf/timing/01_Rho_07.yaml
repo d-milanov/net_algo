@@ -1,0 +1,24 @@
+# Converted from 01_Rho_07.txt. See ../sample_conf.yaml for field descriptions.
+
+out: System.out
+
+check:
+  enabled: true
+  dataLoader: Neodys
+  dataFile: data/neodys.cat
+
+test:
+  enabled: true
+  dataLoader: Cams
+  dataFile: data/CAMS-v2-2013.zip
+
+eps: 0.1
+nTests: 5
+
+distance:
+  name: Rho
+
+net:
+  delta: 0.7
+  maxPivots: 1000
+  pivotStep: 20

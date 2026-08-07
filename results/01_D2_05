@@ -1,17 +1,17 @@
-Testing Net algorithm (distance=Rho, eps=0.2, delta=0.7, maxPivots=1000, pivotStep=20) against brute force
+Testing Net algorithm (distance=D2, eps=0.1, delta=0.5, maxPivots=1000, pivotStep=20) against brute force
 
 Correctness check
 Loaded 17642 orbits (100.000% of all valid rows)
-#M1 = 780068  #M2 = 780068  #(M1 \ M2) = 0  #(M2 \ M1) = 0  max|d1 - d2| = 0.000000
+#M1 = 50502  #M2 = 50502  #(M1 \ M2) = 0  #(M2 \ M1) = 0  max|d1 - d2| = 0.000000
 OK
 
 Timing test
 Cannot parse data: CAMS v2.0 #,Daily #,Date,Time (UT),Tbeg (s),Tend (s),RA inf,±,DEC inf,±,V inf,±,Acc1,±,Acc2,±,Lat beg,±,Long beg,±,H beg,±,Lat end,±,Long end,±,H end,±,Q (deg),Az rad (from S),Z rad,H max,Max Mv (mag),Integr Mv,F-skew,Stations,IAU#,Verified,#,Date,UT (begin),RA_g,±,DEC_g,±,Vg,±,lambda_g,±,beta_g,±,Vh,±,lamb da_h,±,beta_h,±,Sol long,±,q,±,1/a,±,a,e,±,i,±,w,±,Node,±,Pi,±,Stations,Flag Vg=0,T_J,Flag pairs, 
 Loaded 109548 orbits (100.000% of all valid rows)
 Net algo stat:
-  runs: 5, avg: 31765.491 ms, min: 29194.769 ms, max: 34732.920 ms
-  distanceEps2 calls: 5327535650
+  runs: 5, avg: 19545.521 ms, min: 19189.738 ms, max: 20105.749 ms
+  distanceEps2 calls: 4688845820
 Brute force stat:
-  runs: 5, avg: 57563.842 ms, min: 52716.810 ms, max: 59874.388 ms
+  runs: 5, avg: 45734.332 ms, min: 44529.248 ms, max: 46601.545 ms
   distanceEps2 calls: 30001636890
-Avg brute force / avg net: 1.812
+Avg brute force / avg net: 2.340

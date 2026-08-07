@@ -1,0 +1,33 @@
+# Converted from conf_10_DD_04.txt. See ../sample_conf.yaml for field descriptions.
+
+out: System.out
+
+check:
+  enabled: true
+  dataLoader: Neodys
+  dataFile: data/neodys.cat
+  filter:
+    type: EFilter
+    eMin: 0
+    eMax: 1.1
+
+test:
+  enabled: true
+  dataLoader: Cams
+  dataFile: data/CAMS-v2-2013.zip
+  filter:
+    type: EFilter
+    eMin: 0
+    eMax: 11
+
+eps: 10
+nTests: 1
+
+distance:
+  name: DD
+  eMax: 11
+
+net:
+  delta: 0.4
+  maxPivots: 300
+  pivotStep: 20

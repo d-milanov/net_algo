@@ -1,0 +1,44 @@
+# Sample configuration for the timing test of the Net algorithm against a brute-force complete
+# search. Processing configured here takes anywhere from seconds to several minutes, depending
+# on your computer and the chosen data set.
+
+# Program output: "System.out" or a file path.
+out: System.out
+
+# Correctness check: verifies that the Net algorithm and the brute-force search find the same
+# number of close pairs on a (typically small) data set.
+check:
+  enabled: true
+  # Loader for the data file below: Neodys, Mpcorb or Cams.
+  dataLoader: Neodys
+  dataFile: data/neodys.cat
+
+# Timing test: measures and compares the running time of the Net algorithm and the brute-force
+# search on a (typically large) data set.
+test:
+  enabled: true
+  dataLoader: Cams
+  dataFile: data/CAMS-v2-2013.zip
+
+# Distance threshold. All distances not exceeding eps are included in the resulting matrix.
+eps: 0.2
+
+# Number of timed runs to average over.
+nTests: 1
+
+# Distance criterion for the orbit space.
+distance:
+  # D1, D2, DD, DH or Rho.
+  name: Rho
+  # Maximal expected eccentricity, used by D1/DD/DH to derive their relaxed triangle inequality
+  # constant. Ignored by D2 and Rho.
+  eMax: 0.9
+
+# Net algorithm parameters.
+net:
+  # The neighbourhood radius used to group elements around pivots.
+  delta: 0.7
+  # Maximum number of pivots.
+  maxPivots: 1000
+  # Each pivotStep-th data point is considered as a pivot candidate.
+  pivotStep: 20

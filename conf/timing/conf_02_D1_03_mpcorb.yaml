@@ -1,0 +1,32 @@
+# Converted from conf_02_D1_03_mpcorb.txt. See ../sample_conf.yaml for field descriptions.
+
+out: System.out
+
+check:
+  enabled: true
+  dataLoader: Neodys
+  dataFile: data/neodys.cat
+  filter:
+    type: EFilter
+    eMin: 0
+    eMax: 1.0
+
+test:
+  enabled: true
+  dataLoader: Mpcorb
+  dataFile: data/MPCORB.zip
+  filter:
+    type: Reduce
+    times: 7
+
+eps: 0.2
+nTests: 1
+
+distance:
+  name: D1
+  eMax: 1.0
+
+net:
+  delta: 0.3
+  maxPivots: 1000
+  pivotStep: 20

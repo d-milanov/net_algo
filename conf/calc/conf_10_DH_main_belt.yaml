@@ -1,0 +1,28 @@
+# Converted from conf_10_DH_main_belt.txt. See ../sample_conf.yaml for field descriptions.
+
+out: System.out
+
+check:
+  enabled: true
+  dataLoader: Neodys
+  dataFile: data/neodys.cat
+
+test:
+  enabled: true
+  dataLoader: Mpcorb
+  dataFile: data/MPCORB.zip
+  filter:
+    type: MainBelt
+    times: 7
+
+eps: 10
+nTests: 1
+
+distance:
+  name: DH
+  eMax: 1.0
+
+net:
+  delta: 0.2
+  maxPivots: 1000
+  pivotStep: 50

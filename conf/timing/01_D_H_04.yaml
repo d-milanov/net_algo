@@ -1,0 +1,33 @@
+# Converted from 01_D_H_04.txt. See ../sample_conf.yaml for field descriptions.
+
+out: System.out
+
+check:
+  enabled: true
+  dataLoader: Neodys
+  dataFile: data/neodys.cat
+  filter:
+    type: EFilter
+    eMin: 0
+    eMax: 1.1
+
+test:
+  enabled: true
+  dataLoader: Cams
+  dataFile: data/CAMS-v2-2013.zip
+  filter:
+    type: EFilter
+    eMin: 0
+    eMax: 1.1
+
+eps: 0.1
+nTests: 5
+
+distance:
+  name: DH
+  eMax: 1.1
+
+net:
+  delta: 0.4
+  maxPivots: 1000
+  pivotStep: 20

@@ -1,0 +1,16 @@
+Testing Net algorithm (distance=D2, eps=0.01, delta=0.2, maxPivots=1000, pivotStep=40) against brute force
+
+Correctness check
+Loaded 17642 orbits (100.000% of all valid rows)
+#M1 = 4  #M2 = 4  #(M1 \ M2) = 0  #(M2 \ M1) = 0  max|d1 - d2| = 0.000000
+OK
+
+Timing test
+Loaded 150427 orbits (20.000% of all valid rows)
+Net algo stat:
+  runs: 5, avg: 59778.756 ms, min: 53160.148 ms, max: 70531.898 ms
+  distanceEps2 calls: 17259677850
+Brute force stat:
+  runs: 5, avg: 73263.279 ms, min: 69110.575 ms, max: 85259.811 ms
+  distanceEps2 calls: 56570329755
+Avg brute force / avg net: 1.226
